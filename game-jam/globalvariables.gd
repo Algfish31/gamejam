@@ -22,7 +22,6 @@ func _process(delta: float) -> void:
 
 
 func spawn():
-		await get_tree().create_timer(5).timeout
 		randomize()
 		var x = 1
 		location.x = randf_range(1, window_size.x)

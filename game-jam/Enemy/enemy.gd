@@ -27,12 +27,13 @@ func _process(_delta: float) -> void:
 				$Vision/CollisionShape2D.disabled = true #player detection is off
 				if alert == true :
 					changedirection()
-		
+
 func changedirection() -> void:
 	if position.x - player.position.x < 0:
 		sprite.flip_h = true
 	elif position.x - player.position.x > 0:
 		sprite.flip_h = false
+		print(sprite.flip_h)
 		
 	
 	if Globalvariables.plrhealth < 0:
@@ -52,7 +53,10 @@ func _on_vision_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_detected = true
 		player = body
+		alert = true
+		
 
 func _on_vision_body_exited(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_detected = false
+		alert = false

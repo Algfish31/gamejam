@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://ec4qmokcul5f"]
+
+[ext_resource type="Script" uid="uid://d2exudqh0ika2" path="res://Player/player.gd" id="1_btcbx"]
+[ext_resource type="Texture2D" uid="uid://c4mcd8qso5w5i" path="res://Player/pixil-frame-0.png" id="2_gwnis"]
+[ext_resource type="Texture2D" uid="uid://dra6vx4sgkqj1" path="res://Player/pixil-frame-1.png" id="3_k53q1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r0du0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_glv2v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gwnis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k53q1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_btcbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_r0du0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 2)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Polydown" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-578, 325, 588, 328, 5, -8, 0, -5)
+
+[node name="Polyleft" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-577, -333, 3, -3, -576, 327)
+
+[node name="Polyup" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-567, -322, 2, -1, 579, -323)
+
+[node name="Polyright" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(576, 320, 579, -325, 2, -1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 3)
+sprite_frames = SubResource("SpriteFrames_glv2v")
+autoplay = "default"
