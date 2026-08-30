@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d13it50y24oqm"
+path="res://.godot/imported/Watch your back main theme.wav-21cc9220f828d162cdbae7f012a27207.sample"
+
+[deps]
+
+source_file="res://Watch your back main theme.wav"
+dest_files=["res://.godot/imported/Watch your back main theme.wav-21cc9220f828d162cdbae7f012a27207.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

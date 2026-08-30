@@ -21,6 +21,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.58553773, 0.5803254)
 script = ExtResource("1_btcbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -28,6 +29,7 @@ shape = SubResource("CapsuleShape2D_r0du0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 2)
+zoom = Vector2(3, 3)
 
 [node name="Marker2D" type="Marker2D" parent="."]
 

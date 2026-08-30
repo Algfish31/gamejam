@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://kj5xopjfpya7"]
+
+[ext_resource type="Script" uid="uid://chjfqk2r3h2sm" path="res://Mainmenu/mainmenu.gd" id="1_7pav5"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7pav5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 94.0
+offset_right = 902.0
+offset_bottom = 231.0
+theme_override_font_sizes/font_size = 100
+text = "Watch ur back"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 319.0
+offset_right = 664.0
+offset_bottom = 437.0
+theme_override_font_sizes/font_size = 80
+text = "Start"
+expand_icon = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
